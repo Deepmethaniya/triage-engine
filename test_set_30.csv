@@ -1,0 +1,464 @@
+"test_id","job_url","job_decription","expected_outcome","edge_case","why_expected"
+"T01","https://jobs.example.com/lumora/founders-associate","Founder's Associate (m/f/d) – Lumora, Berlin (hybrid)
+
+Lumora is a seed-stage B2B SaaS company (18 people, €4.2M seed) helping facility managers cut energy costs across office buildings. We are hiring our first Founder's Associate to work directly with our CEO, Lena.
+
+What you'll do
+- Own the weekly operating rhythm: KPI dashboard, team OKRs, board and investor updates
+- Run special projects end to end: pricing tests, new-market research, vendor selection
+- Build and document processes in Notion as we grow from 18 to 40 people
+- Support hiring: manage the candidate pipeline and interview logistics
+- Prepare the CEO for sales and investor meetings
+
+What we look for
+- 0–3 years of experience in a startup, consulting, or your own venture
+- Structured thinker who is comfortable with Excel and CRM tools (HubSpot)
+- Excellent English; German is nice to have but not required
+- Bias to action and high ownership
+
+Location: Berlin office (Kreuzberg), 3 days per week. Full-time.","PASS","—","Founder's Associate, seed, reports to CEO, Berlin hybrid, English only"
+"T02","https://jobs.example.com/kestrel/fa-operations-partnerships","Founder's Associate – Operations & Partnerships – Kestrel Freight (Hamburg, hybrid)
+
+Kestrel is a pre-seed marketplace connecting small European exporters with vetted freight forwarders. Team of 7, backed by two logistics angels.
+
+You will work side by side with our two co-founders on:
+- Onboarding forwarder partners and negotiating rate agreements
+- Running our customer onboarding pipeline from first call to first shipment
+- Writing SOPs for shipment exceptions and customs documentation
+- Tracking unit economics per lane in Google Sheets
+- Outbound campaigns to exporters in India, Turkey and the Gulf
+
+You bring
+- 0–2 years of experience; founders, ex-founders and export/import backgrounds welcome
+- Comfortable on the phone with partners across time zones
+- English fluent; German not required (our working language is English)
+
+Hybrid: Hamburg office 2 days a week, rest remote within Germany.","PASS","—","Pre-seed, founder-facing, cross-border trade fits export background, Germany hybrid"
+"T03","https://jobs.example.com/nordwell/cos-associate","Associate, Office of the CEO – Nordwell (Series A, Berlin)
+
+Nordwell builds remote physiotherapy software used by 300+ clinics. We raised a €14M Series A and have 60 people.
+
+The role
+You join the Office of the CEO as its second member and work directly with our CEO and COO on the topics that matter most this quarter.
+- Prepare leadership meetings, track decisions and follow up on action items
+- Analyse clinic acquisition funnels and churn; turn insights into proposals
+- Coordinate cross-functional projects (launch of our Austrian market)
+- Draft internal communications and board materials
+
+Profile
+- 0–3 years in startups, consulting, or as a founder
+- Strong written English; our working language is English. German B1 helpful.
+- Analytical (Excel/Sheets) and organised
+
+Berlin Mitte, hybrid (3 days in office).","PASS","—","Associate-level Chief of Staff role, Series A, CEO office, English working language"
+"T04","https://jobs.example.com/fieldnote/bizops-associate","Business Operations Associate – Fieldnote (Seed, remote within Germany)
+
+Fieldnote uses AI to turn construction-site photos into daily progress reports. 22 people, €6M seed.
+
+Reporting to our co-founder & COO, you will:
+- Own monthly cash flow tracking, runway model and expense reporting
+- Manage vendor contracts and tooling budget
+- Support the founders with investor update data and due diligence requests
+- Improve internal processes across sales handover, billing and support
+
+Requirements
+- Degree in business, finance or similar; 0–3 years of experience
+- Strong Excel (pivot tables, lookups); experience with accounting basics
+- English fluent; German is a plus, not a must
+
+Fully remote within Germany, with a team week in Munich every quarter.","PASS","—","BizOps with finance ops focus, seed, reports to co-founder, remote in Germany"
+"T05","https://jobs.example.com/studyhaven/founders-associate","Founder's Associate – Growth & University Partnerships – Studyhaven (Berlin)
+
+About Studyhaven
+Studyhaven helps international students find verified housing before they arrive in Germany. Since launching in 2024 we have housed more than 4,000 students from 60 countries, and we work with 35 universities and 120 landlords. We are a seed-stage team of 16 people backed by European edtech and proptech investors, and we are profitable on a contribution basis in our two core cities, Berlin and Munich.
+
+Why this role exists
+Our two founders spend too much time on operations that should be systems. We want a generalist who can take ownership of our partnership engine with universities and student agencies, build repeatable processes and free up founder time for fundraising and product.
+
+What you will do
+- Build and manage partnerships with university international offices and student advisory agencies in India, Turkey, Nigeria and Vietnam
+- Own the partner pipeline in HubSpot: outreach, first calls, agreements, onboarding and quarterly reviews
+- Design our partner onboarding playbook and train two partner managers as we grow
+- Run growth experiments with the marketing team (webinars, referral programmes, agency incentives) and report on results
+- Prepare monthly founder reviews: partner KPIs, cohort conversion and revenue per partner
+- Step in wherever the founders need help: investor material, hiring, pricing analysis
+
+What we are looking for
+- 0–3 years of experience in a startup, an advisory business, or as a founder yourself
+- Experience working with international students or education agencies is a strong plus
+- You are comfortable selling: on calls, in email and in person at education fairs
+- Structured and data-literate: Excel/Sheets and a CRM are your daily tools
+- Fluent English is required. German is a plus but not required; our team speaks 11 languages and works in English
+- Willing to travel 3–4 times a year to partner events
+
+What we offer
+- Direct work with both founders and a seat in weekly leadership meetings
+- Real ownership: the partnership channel is yours
+- Competitive salary (€45–52k) plus virtual share options
+- Office in Berlin Friedrichshain, hybrid (3 days in office)
+- Learning budget of €1,000 per year
+
+How to apply
+Send your CV and a few lines about a partnership you built and what you learned from it. We reply to every application within 7 days.","PASS","Long JD (>2000 chars) – tests the Notion 2000-char branch","Near-perfect match to Rise360 (international students), seed, Berlin, English"
+"T06","https://jobs.example.com/tilegrid/fa-international-expansion","Founder's Associate – International Expansion – Tilegrid (Berlin)
+
+Tilegrid is a B2B marketplace for tiles and building materials connecting manufacturers in Spain, Italy and India with distributors across Europe. Series A, 45 people.
+
+As Founder's Associate to our CEO you will:
+- Research and prioritise new supplier and buyer markets
+- Run supplier onboarding projects with our sourcing team
+- Analyse margins per supplier and route; flag leakage
+- Coordinate trade-fair presence (Cersaie, BAU Munich)
+- Prepare board and investor reporting
+
+You have
+- 1–3 years in trade, export/import, consulting or startups
+- Commercial instinct and comfort with numbers
+- Excellent English; Spanish/Italian/German welcome but not required
+
+Berlin, hybrid. Travel ~15%.","PASS","—","Founder's Associate, Series A (<100 ppl), B2B building materials trade, Berlin hybrid"
+"T07","https://jobs.example.com/amperagrid/operations-generalist","Operations Generalist – Ampera Grid (Seed, Berlin)
+
+Ampera Grid software helps municipal utilities plan EV charging capacity. 25 people.
+
+Reporting directly to our founders, you will be the person who makes things run:
+- Set up and improve internal processes (procurement, onboarding, tooling)
+- Coordinate customer pilot logistics and contract paperwork
+- Own our compliance tracker (ISO 27001 preparation)
+- Organise team offsites and customer events
+
+You
+- 0–3 years experience, ideally in a startup
+- Organised, calm under pressure, high ownership
+- English required; German B1 or higher helpful for vendor calls
+
+Berlin office (Wedding), 4 days a week.","PASS","—","Operations generalist reporting to founders, seed climate startup, Berlin"
+"T08","https://jobs.example.com/quillo/founding-operations-associate","Founding Operations Associate – Quillo (Pre-seed, Berlin)
+
+Quillo builds invoicing and tax-reserve tools for freelancers in Germany. 5 people, €1.5M pre-seed.
+
+You will be our first non-technical hire and work with both founders on everything outside engineering:
+- Customer support setup and triage (Intercom)
+- Partnerships with freelancer communities and co-working spaces
+- Outbound to accountants (Steuerberater) for referral partnerships
+- Bookkeeping hand-off and monthly finance close with our accountant
+- Documenting everything so it can be delegated later
+
+You
+- Recent graduate or 0–2 years of experience
+- Founder mindset; built something yourself
+- English fluent; German B1+ (some customer contact is in German, team language is English)
+
+Berlin, onsite 3 days.","PASS","—","First non-technical hire, pre-seed, works with both founders, Berlin"
+"T09","https://jobs.example.com/verdantroutes/strategy-ops-associate","Strategy & Operations Associate (CEO Office) – Verdant Routes (Berlin)
+
+Who we are
+Verdant Routes makes low-carbon business travel simple. Companies use our platform to book rail-first trips, track travel emissions and stay within their climate targets. We serve 900 corporate customers across Germany, Austria, the Netherlands and the Nordics. After our Series B in early 2026 we are 90 people, headquartered in Berlin.
+
+The team
+The CEO Office is a team of three that works across the company on our most important priorities. We sit between the founders, the leadership team and the board. We set the planning rhythm, drive cross-functional initiatives and make sure decisions are made with good data.
+
+Your responsibilities
+- Run our quarterly planning process and OKR tracking across eight teams
+- Build the monthly business review: revenue, retention, gross margin and emissions KPIs
+- Lead 2–3 strategic projects per quarter, for example: entering Switzerland, redesigning our pricing tiers, or evaluating a partnership with a rail operator
+- Prepare board meeting materials together with our CFO
+- Support the founders with investor relations: data room, updates and follow-ups
+- Coordinate leadership offsites and all-hands
+- Act as a thought partner to our CEO and challenge assumptions
+
+What you bring
+- 0–3 years of experience in strategy consulting, investment banking, venture capital, a high-growth startup, or your own company
+- Excellent analytical skills: you are fast in Excel or Google Sheets and comfortable with messy data
+- Clear written communication in English (our company language)
+- German is helpful but not required
+- You enjoy variety and switching between strategy and execution in the same day
+- You care about climate impact
+
+What we offer
+- Close work with the CEO and exposure to the board
+- A clear path into a leadership role within 18–24 months
+- Salary €50–58k plus ESOP
+- Hybrid in Berlin (office near Ostbahnhof), BahnCard 100 for all employees
+- 30 vacation days
+
+Our hiring process
+1. 30-minute intro call with our Head of CEO Office
+2. Case study (take-home, 3 hours max) and debrief
+3. Meeting with our CEO
+4. Reference checks and offer","PASS","Long JD (>2000 chars) – tests the Notion 2000-char branch","Strategy & Ops in CEO office, Series B (~90 ppl), Berlin, English"
+"T10","https://jobs.example.com/brightloop/fa-revenue-operations","Founder's Associate – Revenue Operations – Brightloop (Seed, remote in Germany)
+
+Brightloop builds onboarding software for HR teams at mid-sized companies. 20 people, €5M seed.
+
+Work with our CEO on revenue:
+- Build and maintain our HubSpot pipeline and reporting
+- Run outbound campaigns to HR leaders (sequences, list building, testing messaging)
+- Analyse win/loss and conversion rates; propose improvements
+- Support the CEO in late-stage deals: proposals, pricing, contracts
+
+You
+- 0–3 years in sales, RevOps, growth or a startup you founded
+- HubSpot experience (certification a plus)
+- English fluent; German not required
+
+Remote within Germany, monthly team days in Berlin.","PASS","—","Founder's Associate in RevOps, seed, remote Germany, HubSpot + outbound fits"
+"T11","https://jobs.example.com/lumora/founders-associate","Founder's Associate (m/f/d) – Lumora, Berlin (hybrid)
+
+Lumora is a seed-stage B2B SaaS company (18 people, €4.2M seed) helping facility managers cut energy costs across office buildings. We are hiring our first Founder's Associate to work directly with our CEO, Lena.
+
+What you'll do
+- Own the weekly operating rhythm: KPI dashboard, team OKRs, board and investor updates
+- Run special projects end to end: pricing tests, new-market research, vendor selection
+- Build and document processes in Notion as we grow from 18 to 40 people
+- Support hiring: manage the candidate pipeline and interview logistics
+- Prepare the CEO for sales and investor meetings
+
+What we look for
+- 0–3 years of experience in a startup, consulting, or your own venture
+- Structured thinker who is comfortable with Excel and CRM tools (HubSpot)
+- Excellent English; German is nice to have but not required
+- Bias to action and high ownership
+
+Location: Berlin office (Kreuzberg), 3 days per week. Full-time.","DUPLICATE","Exact duplicate of T01 (same URL)","Same job sent twice – should be caught, not re-scored or saved twice"
+"T12","https://jobs.example.com/hallmark-insurance/junior-business-analyst","Junior Business Analyst (m/f/d) – Hallmark Insurance AG, Frankfurt am Main
+
+Hallmark Insurance AG is a leading European insurer with 4,000 employees.
+
+Your tasks
+- Analyse claims process data and create reports for department heads
+- Support requirement documentation for IT projects
+- Maintain process documentation in our BPM tool
+
+Your profile
+- Degree in business, economics or information systems
+- First experience with SQL and Power BI
+- Very good English; German helpful
+
+Frankfurt office, hybrid 2 days remote.","LOW_SCORE","—","Large corporate (4,000 ppl), no founder contact, loosely related role"
+"T13","https://jobs.example.com/corvane/sdr","Sales Development Representative – Corvane (Berlin)
+
+Corvane provides cybersecurity training for SMEs.
+
+Your job
+- Make 60+ outbound calls per day to IT managers in the DACH region
+- Book qualified meetings for our Account Executives
+- Keep Salesforce up to date
+
+What you need
+- First experience in outbound sales
+- Resilience and a competitive spirit
+- English fluent; German a plus
+
+You report to our Sales Manager. Berlin office, full-time. Base + commission.","LOW_SCORE","Company size unclear","Pure SDR role reporting to a sales manager, no founder contact"
+"T14","https://jobs.example.com/lumio-labs/founders-associate-amsterdam","Founder's Associate – Lumio Labs (Seed, Amsterdam, onsite)
+
+Lumio Labs builds AI scheduling software for dental clinics. 14 people.
+
+Work directly with our CEO on fundraising prep, hiring, operations and special projects. You'll own our weekly KPI review and help launch in Belgium.
+
+You
+- 0–3 years of experience; ex-founders welcome
+- Strong Excel and communication skills
+- English fluent; Dutch not required
+
+Onsite in Amsterdam 5 days per week. Visa sponsorship not available.","LOW_SCORE","Rubric stress test: great role but outside Germany","Everything fits except location (Amsterdam onsite). Location is only worth 1 point, so the rubric will probably still pass it – a known weakness to fix"
+"T15","https://jobs.example.com/megamart/operations-coordinator-leipzig","Operations Coordinator Warehouse (m/f/d) – MegaMart Logistics GmbH, Leipzig
+
+MegaMart operates 40 distribution centres across Europe with 25,000 employees.
+
+Tasks
+- Coordinate shift planning for 80 warehouse staff
+- Monitor picking KPIs and report deviations
+- Ensure compliance with health and safety rules
+
+Profile
+- Experience in logistics or warehouse operations
+- Willingness to work in shifts, including weekends
+- English good; German helpful
+
+Leipzig, onsite.","LOW_SCORE","—","Warehouse shift coordination at a large retailer; unrelated to founder-facing ops"
+"T16","https://jobs.example.com/pixelpeak/marketing-manager","Marketing Manager (Performance) – PixelPeak (Series A, Berlin)
+
+PixelPeak is a design collaboration tool with 70 employees.
+
+You will
+- Own paid acquisition on Google, Meta and LinkedIn (€150k/month budget)
+- Run A/B tests on landing pages
+- Report on CAC and payback to the Head of Marketing
+
+You have
+- 3–5 years of hands-on performance marketing experience
+- Deep knowledge of GA4 and attribution
+- English fluent
+
+Berlin, hybrid.","LOW_SCORE","Mid-level (3–5 yrs) – passes language/seniority gate but should score low","Marketing role, mid-level, reports to Head of Marketing"
+"T17","https://jobs.example.com/stackfold/junior-data-engineer","Junior Data Engineer – Stackfold (Seed, Berlin)
+
+Stackfold builds data infrastructure for e-commerce brands. 12 people.
+
+You will
+- Build and maintain ETL pipelines in Python and dbt
+- Manage our Snowflake warehouse
+- Write tests and monitoring for data quality
+
+You have
+- Degree in computer science or similar
+- Python and SQL skills; Airflow or dbt experience a plus
+- English fluent
+
+Berlin, hybrid.","LOW_SCORE","—","Pure engineering role – role_fit should be 0"
+"T18","https://jobs.example.com/cloudberry/customer-success-associate","Customer Success Associate – Cloudberry (Berlin)
+
+Cloudberry is a 400-person scale-up providing payroll software to 10,000 companies.
+
+Your role
+- Onboard new SME customers and run product trainings
+- Handle tickets and escalations in Zendesk
+- Identify upsell opportunities and pass them to Account Management
+
+Your profile
+- 0–2 years in customer-facing roles
+- English fluent; German or French a plus
+
+Berlin office, hybrid. You report to the Team Lead Customer Success.","LOW_SCORE","—","Scale-up of 400 ppl, CS role, no founder contact"
+"T19","https://jobs.example.com/unknown-startup/various-tasks","Startup in Berlin is looking for a motivated person to support us with various tasks. Flexible hours. Send your CV to the email in the post.","LOW_SCORE","Vague JD with almost no information","Not enough information to score; should not pass"
+"T20","https://jobs.example.com/hausgruen/founders-associate-de","Founder's Associate (m/w/d) – Hausgrün (Seed, Berlin)
+
+Hausgrün plant und installiert Wärmepumpen für Einfamilienhäuser. Wir sind 30 Personen und wachsen schnell.
+
+Deine Aufgaben
+- Du arbeitest direkt mit unseren Gründern an strategischen Projekten
+- Du baust Prozesse in Vertrieb und Montageplanung auf
+- Du bereitest Investoren-Updates und Board-Meetings vor
+
+Dein Profil
+- Abgeschlossenes Studium, 0–3 Jahre Berufserfahrung
+- Verhandlungssichere Deutschkenntnisse (mindestens C1) – du sprichst täglich mit Handwerksbetrieben und Kunden
+- Gute Englischkenntnisse
+
+Berlin, vor Ort.","REJECT_LANGUAGE","JD written in German","Requires C1 German (verhandlungssicher)"
+"T21","https://jobs.example.com/rheinlogik/junior-ops-manager-de","Junior Operations Manager (m/w/d) – Rheinlogik GmbH (Köln)
+
+Rheinlogik digitalisiert die Disposition für mittelständische Speditionen.
+
+Deine Aufgaben
+- Koordination zwischen Kunden, Fahrern und Disposition
+- Optimierung interner Abläufe
+- Erstellung von Reportings für die Geschäftsführung
+
+Dein Profil
+- Erste Erfahrung im Operations-Bereich
+- Fließende Deutschkenntnisse in Wort und Schrift
+- Sicherer Umgang mit MS Office
+
+Köln, hybrid.","REJECT_LANGUAGE","JD written in German","Requires fluent German"
+"T22","https://jobs.example.com/weber-partner/assistenz-gf-de","Assistenz der Geschäftsführung (m/w/d) – Weber & Partner Immobilien, München
+
+Ihre Aufgaben
+- Terminkoordination und Reiseplanung für die Geschäftsführung
+- Vorbereitung von Präsentationen und Protokollen
+- Korrespondenz mit Mietern und Behörden
+
+Ihr Profil
+- Kaufmännische Ausbildung oder Studium
+- Deutsch auf muttersprachlichem Niveau
+- Organisationstalent
+
+München, vor Ort, Vollzeit.","REJECT_LANGUAGE","JD written in German","Requires native-level German"
+"T23","https://jobs.example.com/mittelwerk/founders-associate","Founder's Associate – Mittelwerk (Seed, Berlin)
+
+Mittelwerk builds procurement software for German Mittelstand manufacturers. 20 people, €5M seed.
+
+Work directly with our CEO on sales, partnerships and operations. You'll own our pilot programme with 10 manufacturing customers and prepare investor updates.
+
+Requirements
+- 0–3 years of experience in startups or consulting
+- Fluent German (C1 or higher) is a must: you will run customer calls and on-site visits with Mittelstand clients in German
+- Fluent English
+
+Berlin, hybrid.","REJECT_LANGUAGE","Perfect role, but C1 German is a hard requirement","Tests that one hard blocker overrides an otherwise ideal profile"
+"T24","https://jobs.example.com/ledgerly/bizops-associate","Business Operations Associate – Ledgerly (Series A, Berlin)
+
+Ledgerly automates tax filing for German small businesses. 50 people.
+
+You will support our COO with process improvements, vendor management and reporting.
+
+Requirements
+- 0–2 years of experience
+- Native-level German (you will review tax-office correspondence daily)
+- English fluent
+
+Berlin office.","REJECT_LANGUAGE","English JD with native-German requirement","Requires native-level German"
+"T25","https://jobs.example.com/sonnenfeld/founders-associate-de-b1","Founder's Associate (m/w/d) – Sonnenfeld Energy (Seed, Berlin)
+
+Sonnenfeld entwickelt Software für Solar-Installateure. Wir sind ein internationales Team von 15 Personen; unsere Arbeitssprache ist Englisch.
+
+Deine Aufgaben
+- Direkte Zusammenarbeit mit unserem CEO an Wachstum, Operations und Fundraising
+- Aufbau von Prozessen und KPI-Reportings
+- Projektleitung für unseren Markteintritt in Österreich
+
+Dein Profil
+- 0–3 Jahre Erfahrung in Startups, Beratung oder als Gründer:in
+- Englisch fließend; Deutsch auf B1-Niveau reicht aus
+- Strukturierte, eigenverantwortliche Arbeitsweise
+
+Berlin, hybrid.","PASS","JD written in German, but only B1 German needed","Tests that a German-language JD is not auto-rejected when the requirement is B1 and working language is English"
+"T26","https://jobs.example.com/orbitpay/head-of-operations","Head of Operations – OrbitPay (Series A, Berlin)
+
+OrbitPay is a payments platform for marketplaces. 80 people.
+
+You will lead a team of 12 across support, risk operations and onboarding, and report to the COO.
+
+Requirements
+- 7+ years of operations experience, at least 3 in a leadership role
+- Experience in fintech or payments
+- English fluent
+
+Berlin, hybrid.","REJECT_SENIORITY","—","Head of role, 7+ years, manages a team"
+"T27","https://jobs.example.com/frostline/vp-strategy-operations","VP Strategy & Operations – Frostline (Series B, Berlin)
+
+Frostline builds cold-chain monitoring for food logistics. 150 people.
+
+Reporting to the CEO, you will own company strategy, planning and the operations organisation (25 people).
+
+You bring 10+ years of experience in consulting and operations leadership, ideally in a scale-up.
+
+English required. Berlin.","REJECT_SENIORITY","—","VP level, 10+ years"
+"T28","https://jobs.example.com/halcyon/chief-of-staff","Chief of Staff to the CEO – Halcyon (Series A, Berlin)
+
+Halcyon builds AI tools for legal teams. 55 people.
+
+You will be the CEO's right hand: run the leadership team rhythm, lead strategic projects and manage board relations.
+
+Requirements
+- 5+ years of experience in strategy consulting or investment banking, followed by a role in a high-growth startup
+- Proven track record of leading cross-functional projects
+- Excellent English
+
+Berlin, onsite 4 days.","REJECT_SENIORITY","Title looks like a target role, but it is senior","Chief of Staff title but requires 5+ years in consulting/IB – tests that seniority beats title"
+"T29","https://jobs.example.com/greenhaul/director-business-operations","Director of Business Operations – Greenhaul (Series B, Munich)
+
+Greenhaul runs electric trucking for retail logistics. 200 people.
+
+Lead business operations, planning and analytics (team of 6). Report to the COO.
+
+Requirements: 8+ years in operations or strategy, 3+ years managing teams. English fluent; German a plus.
+
+Munich, hybrid.","REJECT_SENIORITY","—","Director level, 8+ years"
+"T30","https://jobs.example.com/resonai/founding-sales","Founding Sales – Resonai (YC-backed, Berlin)
+
+Resonai builds speech AI models for European languages. 10 people, recently raised a seed round.
+
+You will be our first commercial hire and work directly with our CEO:
+- Own outbound to enterprise prospects: list building, sequences, first calls
+- Run demos and move deals from first meeting to signed pilot
+- Feed customer insights back to the product team
+
+You
+- 1–3 years in B2B sales, or you've sold your own product as a founder
+- You prefer doing outreach yourself over designing sales strategy
+- English fluent; German helpful
+
+Berlin, onsite 4 days.","BORDERLINE","Adjacent role (sales) with strong founder contact","Founding sales role at an early startup reporting to CEO – should land right around 4.0. Real-life twin of the KugelAudio case that scored 3.8"

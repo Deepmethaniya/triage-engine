@@ -1,0 +1,711 @@
+{
+  "name": "Triage Engine",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4a334f4c-473e-46d5-b80e-176f87996705",
+              "name": "Master_cv",
+              "value": "DEEP NATVARBHAI METHANIYA \nGeneralist Operator / Founder’s Associate (Available immediately for onsite role in Germany) \nBerlin, Germany | [contact details removed]\n________________________________________\nABOUT\nGeneralist operator and recent graduate with experience building operational systems from the ground up, working with cross-functional teams, and finding solutions in fast-paced environments. Successfully bootstrapped an educational advisory firm to revenue, hired and worked alongside a core founding team, and developed transparent client onboarding pipelines. Brings practical working student and project experience managing cross-border logistics, drafting standard operating procedures, and handling high-volume communications autonomously. Fluent in English (C1) and German (B1). Prepared to step in as a full-time Founder’s Associate or in similar ops roles, taking ownership of daily operations, execution, and administrative responsibilities with minimal supervision.________________________________________\nEXPERIENCE\nOperations Lead & Founder | Rise360 | Nov 2025 – Sep 2026\n(Systemized workflows and delegated daily operations to the co-founder to enable a seamless transition into a full-time onsite role in Germany.)\n•\tZero-to-One Execution: Built all core commercial functions from scratch including digital setups, drafting MOUs, outbound campaigns, client onboarding pipelines and pricing strategy\n•\tHiring & Team Management: Sourced, interviewed, and onboarded a core founding team; established clear execution guidelines each role. \n•\tBootstrapped Operations: Designed a fully remote, digital-first operating model without physical office overhead, decreasing fixed operating costs by 43% compared to traditional advisory setups.\n•\tOperational Handoff: Documented SOPs and trained team leads on daily execution to ensure business continuity upon moving out of the daily activities. \n\nWorking Student – Operations | Akshar Visa & Immigration | Jan 2024 – Oct 2025\n•\tCustomer Support & Triage: Acted as the primary operational point of contact for international students, managing high-volume inbound inquiry, resolving onboarding bottlenecks, and maintaining compliance documentation.\n•\tAutonomous Execution: Managed daily operations, client communications, and documentation tracking across multiple time zones alongside university studies with minimal supervision.\n•\tPipeline Acceleration: Coordinated communications between partner institutions and prospective client to identify processing hurdles and keep operations moving efficiently.\n•\tProcess Documentation: Drafted outreach templates, onboarding guides, and partner communication rules to streamline recurring inquiries and shorten response times.\n\n\n\nInternational Operations Specialist (Project-Based) | Spolo Ceramic Pvt. Ltd | Apr 2023 – Aug 2023\n•\tTravel & Event Logistics: Independently organized complex travel itineraries, calendar scheduling, expense tracking, and event logistics for high-stakes commercial trips to Dubai and Iraq.\n•\tOn-the-Ground Execution: Conducted face-to-face distributor meetings, assisted with brand exhibition booths, and managed post-event client follow-ups across overseas markets.\n•\tCommercial Support: Audited active pricing agreements across variable market environments to identify and eliminate margin leakage.\n________________________________________\nEDUCATION\nMA in International Management | IU International University, Berlin | Jan 2024 – July 2026\n(Thesis: AI-driven Financial Modelling for Startup Valuation and Fundraising)\nBachelor of Commerce (BCom): Advanced Accounting & Auditing | Gujarat University | Aug 2020 – Apr 2023\nGerman Language Level B1 | Kapitel Zwei Language School, Berlin | Jan 2025\nDiploma in Export and Import Management | IIEIM | Sep 2020 – Nov 2020\n\nCERTIFICATIONS\nCertified Inbound Sales | HubSpot Academy | Issued June 2026\nSocial Media Marketing Specialist | HubSpot Academy | Issued May 2024\nSEO Fundamentals & Search Intent | Semrush Academy | Issued June 2026\n\nTECHNICAL TOOLKIT & SKILLS\n•\tOperations & Admin: Process Design, Calendar & Travel Logistics, Vendor Coordination, Expense Tracking, Compliance Tracking\n•\tGrowth & Outreach: Outbound Cold Campaigns, CRM Pipeline Management (HubSpot), B2B Prospecting, Partnership Coordination\n•\tFinancial & Analytics: Working Capital Management, Cash Flow Tracking, Advanced Excel (Pivot Tables, XLOOKUP)\n•\tSoftware & AI: ChatGPT, Claude, Google Workspace, Notion, Tally ERP, Semrush\n•\tLanguages: English (C1 – Full Professional), German (B1 – Working Professional), Hindi (Native), Gujarati (Native)\n\nECOSYSTEM EXPERIENCE & VOLUNTEERING\nSpeakers & Main Stage Operations | EU-Startups Summit (Malta) | May 2026\nEvent Operations & Logistics Coordinator | Tech Open Air (TOA) Berlin | June 2024\n",
+              "type": "string"
+            },
+            {
+              "id": "416d7b18-4149-433e-9105-65ef89b883fc",
+              "name": "job_decription",
+              "value": "={{ $json.job_decription ?? $json.message?.text ?? '' }}",
+              "type": "string"
+            },
+            {
+              "id": "4784e282-8ad7-4bf7-b7ea-406b6d0f21da",
+              "name": "job_url",
+              "value": "={{ $json.job_url ?? (($json.message?.entities ?? []).find(e => (e.url ?? '').includes('/jobs/view/'))?.url ?? '').split('?')[0] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        160,
+        352
+      ],
+      "id": "93834ce7-2218-48b8-9e22-ac3c90f9ffea",
+      "name": "InputCvJD"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Evaluate the candidate's [Master CV] against the provided [Job Description].\n\n[Master CV]:\n{{ $('InputCvJD').item.json.Master_cv }}\n\n[Job Description]:\n{{ $('InputCvJD').item.json.job_decription }}\n\nRespond ONLY with the raw JSON object matching the schema in the system prompt.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Role: You are an automated ATS candidate filter focused on speed and efficiency.\n\nTask: Evaluate the candidate's Master CV against the Job Description based criteria ratings, role title, and company name.\n\n---\n\nCRITERIA RATINGS (only if eligible = true)\nRate each criterion as an integer within its range. Judge only from the Master CV and the Job Description. Do not assume skills the CV does not show.\n- Analyze the Job Description for Seniority / Experience Level:\n- Entry-Level / Junior / Associate / Founder's Associate / Operations Generalist (0-3 years experience): seniority_fit = 2\n- Mid-Level / Manager (3-5 years experience): seniority_fit = 1\n- Senior / Lead / Head of / Director / VP / C-Level (5+ years experience or management heavy): seniority_fit = 0\n\nIf it is senior role give\n- role_fit (0-3): 3 = founder's associate, chief of staff, or business operations/operator role working with leadership. 2 = adjacent role (growth, sales ops, strategy, export/sales management). 1 = loosely related. 0 = unrelated or pure engineering.\n- stage (0-2): 2 = pre-seed to Series B or under about 100 people. 1 = company size unclear. 0 = large corporate.\n- founder_proximity (0-2): 2 = reports directly to a founder or CEO. 1 = works with leadership indirectly. 0 = no founder contact.\n- skills_tools (0-2): 2 = the core skills and tools in the JD are clearly covered by the CV. 1 = partial overlap. 0 = major gaps.\n- location (0-1): 1 = Berlin, Germany-remote, or hybrid in Germany. 0 = anything else.\n\n---\n\n### REQUIRED OUTPUT FORMAT (eligible = true):\nRespond ONLY with a raw valid JSON object:\n{\n  \"role_title\": \"string\",\n  \"company\": \"string\",\n  \"eligible\": true,\n  \"role_fit\": 0,\n  \"stage\": 0,\n  \"founder_proximity\": 0,\n  \"skills_tools\": 0,\n  \"location\": 0,\n  \"reason\": \"one sentence, max 25 words\"\n}"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        1184,
+        -48
+      ],
+      "id": "62236797-c8c8-454d-8c0b-61dcc26274b8",
+      "name": "JobEvaluator",
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        176
+      ],
+      "id": "e9957651-29b4-4f70-ace5-e81dedb8e41d",
+      "name": "LLM"
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -64,
+        256
+      ],
+      "id": "c34b5d81-c708-4cf4-a4d8-785cba021890",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "model": "nvidia/nemotron-3.5-lightning:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        464,
+        320
+      ],
+      "id": "ce4f9518-cead-4431-b877-150f8b239038",
+      "name": "OpenRouter Chat Model"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "b0b625ac-055b-4ec8-85b3-907d5dfadb33",
+              "leftValue": "={{ $json.eligible }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        960,
+        192
+      ],
+      "id": "7b71d8a3-739f-441f-a472-92e2db985ae3",
+      "name": "EnglishOrGerman"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Parse output from LLM 1 (German Eligibility)\nconst rawText = $input.item.json.text || $input.item.json.response || $input.item.json.choices?.[0]?.message?.content;\nconst parsed = typeof rawText === 'string' ? JSON.parse(rawText.replace(/```json|```/g, '').trim()) : rawText;\n\nconst eligible = Boolean(parsed.eligible);\nconst jd = $('InputCvJD').item.json.job_decription || '';\nconst jd_in_german = /\\b(wir suchen|deine aufgaben|dein profil|bewirb dich|anforderungen|aufgaben)\\b/i.test(jd);\n\nreturn {\n  eligible,\n  reason: eligible ? parsed.reason : (parsed.reason || 'Failed German requirement (B1+ required)'),\n  jd_in_german\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        736,
+        192
+      ],
+      "id": "3c48b963-a5af-4a43-a88a-8b2f32036d32",
+      "name": "OutputFormating"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Plaintext\n[Job Description]:\n{{ $('InputCvJD').item.json.job_decription }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are a strict recruiter evaluating language and Seniority eligibility. \nCandidate's German Level: B1 (Intermediate) \nCamdidate's Target level: Entry-Level / Junior / Associate / 0-3 years experience\n\n Task: \n- Analyze the Job Description for German language requirements. - If German is NOT required or only basic/intermediate/B1 German is preferred: eligible = true. - If fluent, native, business-fluent, or C1/C2 German is strictly required: eligible = false. \n- Seniority Level:  If Senior, Lead, Head of, Director, VP, C-Level, or 5+ years experience is required: eligible = false.\n \nRespond STRICTLY in valid raw JSON with no markdown formatting: {   \"eligible\": true or false,   \"reason\": \"Short explanation of why it passed or failed (e.g., 'Requires C1 German' or 'Senior level role (5+ yrs)') \" }"
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        384,
+        96
+      ],
+      "id": "596ebd7e-437b-482a-af77-e26b42df1dee",
+      "name": "languageRequirement",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "YOUR_DATA_TABLE_ID",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "job_url": "={{ $json.job_url }}"
+          },
+          "matchingColumns": [
+            "job_url"
+          ],
+          "schema": [
+            {
+              "id": "job_url",
+              "displayName": "job_url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        496
+      ],
+      "id": "adf48d12-d78f-44ee-a5be-d6286a4ebf11",
+      "name": "Insert row"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        -64,
+        448
+      ],
+      "id": "2910f82f-26da-4fa3-8140-8ff0b1a93425",
+      "name": "Telegram Trigger",
+      "retryOnFail": true,
+      "maxTries": 5
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1536,
+        352
+      ],
+      "id": "cfd34cf1-cdb0-4d45-bc6b-c7e5ff926308",
+      "name": "ProcessEndHere"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "e71e01c5-7c55-49cc-9369-12d87abfb9b8",
+              "leftValue": "={{ $json.eligible }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "277821d6-a1dc-4460-85b0-788895943608",
+              "leftValue": "={{ $json.score }}",
+              "rightValue": 4,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1760,
+        48
+      ],
+      "id": "1046a3e0-4615-4e45-b46e-42ad04154456",
+      "name": "IfEligible"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Not Eligible\nReason: {{ $json.reason }}\n\nURL: {{ $('InputCvJD').item.json.job_url }}\nJD: {{ $('InputCvJD').item.json.job_decription }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1248,
+        352
+      ],
+      "id": "510f2eea-6c0b-4a5c-9ecd-4b1ac9a0c3d5",
+      "name": "SendRejectionMessage",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=Matching score is lower than 4, it is actually  {{ $json.score }}\n\nCompany: {{ $json.company }}\nRole: {{ $json.role_title }}\nJob_Url: {{ $json.job_url }}\nReason: {{ $json.reason }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1984,
+        144
+      ],
+      "id": "73f24024-e8de-4fc8-92f8-36a7e5de337e",
+      "name": "SendLowScoreRejectionMessage",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "4b0495cb-f8e5-4fba-932d-2fc307710189",
+              "leftValue": "={{ $('InputCvJD').item.json.job_decription.length }}",
+              "rightValue": 2000,
+              "operator": {
+                "type": "number",
+                "operation": "lte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1984,
+        -48
+      ],
+      "id": "9475c110-d857-49db-8e8f-5d1e9c753f90",
+      "name": "IfJdLength2000"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "dataSourceId": {
+          "__rl": true,
+          "value": "YOUR_NOTION_DATABASE_ID",
+          "mode": "id"
+        },
+        "title": "={{ $json.company }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Company|title",
+              "title": "={{ $json.company }}"
+            },
+            {
+              "key": "Role|rich_text",
+              "textContent": "={{ $json.role_title }}"
+            },
+            {
+              "key": "MatchScore|number",
+              "numberValue": "={{ $json.score }}"
+            },
+            {
+              "key": "Description|rich_text",
+              "textContent": "={{ $json.reason }}"
+            },
+            {
+              "key": "CreatedDate|date",
+              "includeTime": false,
+              "date": "={{ $now.format('yyyy-MM-dd') }}"
+            },
+            {
+              "key": "JD|rich_text",
+              "textContent": "={{ $('InputCvJD').item.json.job_decription }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 3,
+      "position": [
+        2208,
+        -144
+      ],
+      "id": "75d505ed-618f-42e4-911e-e4f857c7f328",
+      "name": "CreatewithJd"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "dataSourceId": {
+          "__rl": true,
+          "value": "YOUR_NOTION_DATABASE_ID",
+          "mode": "id"
+        },
+        "title": "={{ $json.company }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Company|title",
+              "title": "={{ $json.company }}"
+            },
+            {
+              "key": "Role|rich_text",
+              "textContent": "={{ $json.role_title }}"
+            },
+            {
+              "key": "MatchScore|number",
+              "numberValue": "={{ $json.score }}"
+            },
+            {
+              "key": "Description|rich_text",
+              "textContent": "={{ $json.reason }}"
+            },
+            {
+              "key": "CreatedDate|date",
+              "includeTime": false,
+              "date": "={{ $now.format('yyyy-MM-dd') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 3,
+      "position": [
+        2208,
+        48
+      ],
+      "id": "e4935646-a456-47c2-aab7-4cb7768ac6a6",
+      "name": "CreateWithoutJd"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Parse output from LLM 2 (Full Scoring & Evaluation)\nconst j = $input.item.json;\nconst rawText = j.text || j.response || j.choices?.[0]?.message?.content || '';\n\n// Read the JSON safely, even if the AI adds extra text around it\nlet parsed = null;\nif (typeof rawText === 'object' && rawText !== null) {\n  parsed = rawText;\n} else {\n  const s = String(rawText);\n  const start = s.indexOf('{');\n  const end = s.lastIndexOf('}');\n  if (start !== -1 && end > start) {\n    try { parsed = JSON.parse(s.slice(start, end + 1)); } catch (e) { parsed = null; }\n  }\n}\n\nconst input = $('InputCvJD').item.json;\nconst step1 = $('OutputFormating').item.json;\n\n// If the AI gave no usable answer: don't crash, report it instead\nif (!parsed) {\n  const errText = j.error ? ' Error: ' + String(j.error.message || j.error) : '';\n  return {\n    role_title: 'Unknown',\n    company: 'Unknown',\n    job_url: input.job_url,\n    eligible: true,\n    role_fit: 0, stage: 0, founder_proximity: 0, skills_tools: 0, location: 0,\n    total: 0,\n    score: 0,\n    reason: 'AI scoring failed (empty or invalid reply) - please re-run this job.' + errText,\n    jd_in_german: step1.jd_in_german,\n    scoring_failed: true,\n    passes: false\n  };\n}\n\nconst clamp = (v, max) => Math.max(0, Math.min(max, Number(v) || 0));\n\nconst role_fit = clamp(parsed.role_fit, 3);\nconst stage = clamp(parsed.stage, 2);\nconst founder_proximity = clamp(parsed.founder_proximity, 2);\nconst skills_tools = clamp(parsed.skills_tools, 2);\nconst location = clamp(parsed.location, 1);\n\nconst total = role_fit + stage + founder_proximity + skills_tools + location;\nconst score = Math.round((1 + 4 * (total / 10)) * 10) / 10;\n\nreturn {\n  role_title: parsed.role_title || 'Unknown',\n  company: parsed.company || 'Unknown',\n  job_url: input.job_url,\n  eligible: true,\n  role_fit,\n  stage,\n  founder_proximity,\n  skills_tools,\n  location,\n  total,\n  score,\n  reason: parsed.reason || 'High alignment across profile factors',\n  jd_in_german: step1.jd_in_german,\n  scoring_failed: false,\n  passes: score >= 4.0\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1536,
+        48
+      ],
+      "id": "103634fd-b6a9-4d05-9529-1fbdeda98b3a",
+      "name": "ScoringAndEvalution"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=SAVED NEW HIGH-MATCH JOB BUT MUST SAVE JD MANUALLY.\n\nTitle: {{ $json.property_role }} \nCompany: {{ $json.name }} \nScore: ({{ $json.property_match_score }} /5) \nNotion: {{ $json.url }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2432,
+        48
+      ],
+      "id": "50b2e199-3362-4b23-b485-763a186bbb2c",
+      "name": "SendManualJdMessage"
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=SAVED NEW HIGH-MATCH JOB:\n\nTitle: {{ $json.property_role }} \nCompany: {{ $json.name }} \nScore: ({{ $json.property_match_score }} /5) \nNotion: {{ $json.url }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2432,
+        -144
+      ],
+      "id": "515676f6-c190-45db-a661-8e45a32528c8",
+      "name": "SendHighMatchMessage"
+    }
+  ],
+  "connections": {
+    "InputCvJD": {
+      "main": [
+        [
+          {
+            "node": "languageRequirement",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JobEvaluator": {
+      "main": [
+        [
+          {
+            "node": "ScoringAndEvalution",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "JobEvaluator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "InputCvJD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "languageRequirement",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EnglishOrGerman": {
+      "main": [
+        [
+          {
+            "node": "JobEvaluator",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SendRejectionMessage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OutputFormating": {
+      "main": [
+        [
+          {
+            "node": "EnglishOrGerman",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "languageRequirement": {
+      "main": [
+        [
+          {
+            "node": "OutputFormating",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "InputCvJD",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IfEligible": {
+      "main": [
+        [
+          {
+            "node": "IfJdLength2000",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SendLowScoreRejectionMessage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SendRejectionMessage": {
+      "main": [
+        [
+          {
+            "node": "ProcessEndHere",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IfJdLength2000": {
+      "main": [
+        [
+          {
+            "node": "CreatewithJd",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CreateWithoutJd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CreatewithJd": {
+      "main": [
+        [
+          {
+            "node": "SendHighMatchMessage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CreateWithoutJd": {
+      "main": [
+        [
+          {
+            "node": "SendManualJdMessage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ScoringAndEvalution": {
+      "main": [
+        [
+          {
+            "node": "IfEligible",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "timezone": "Europe/Berlin",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false,
+    "timeSavedPerExecution": 8
+  },
+  "meta": {},
+  "nodeGroups": [],
+  "tags": []
+}
